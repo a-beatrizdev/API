@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TechConnect Solutions</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+    <header>
+        <h1>TechConnect Solutions</h1>
+        <p>Sistema Administrativo Interno</p>
+    </header>
+
+    <main class="container">
+
+        <!-- USUÁRIOS -->
+        <section class="card">
+            <h2>👥 Lista de Usuários</h2>
+
+            <button id="btnUsuarios">
+                Buscar Usuários
+            </button>
+
+            <div id="loadingUsuarios"></div>
+
+            <div id="usuarios"></div>
+        </section>
+
+        <!-- CEP -->
+        <section class="card">
+            <h2>📍 Consulta de CEP</h2>
+
+            <div class="cep-area">
+                <input type="text" id="cep" placeholder="Digite o CEP" maxlength="8">
+
+                <button id="btnCep">
+                    Buscar CEP
+                </button>
+            </div>
+
+            <div id="loadingCep"></div>
+
+            <div id="resultadoCep"></div>
+        </section>
+
+    </main>
+
     <script src="script.js"></script>
-    
+
 </body>
-</html> 
+
+</html>

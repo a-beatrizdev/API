@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header p {
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    padding-bottom: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .25);
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.cep-area {
+    display: flex;
+    gap: 10px;
+}
+
+#usuarios {
+    margin-top: 20px;
+}
+
+.usuario {
+    background: rgba(255, 255, 255, 0.07);
+    border-left: 4px solid #3b82f6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.usuario strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.loading {
+    margin-top: 15px;
+    color: #facc15;
+    font-weight: 600;
+}
+
+.erro {
+    margin-top: 15px;
+    color: #f87171;
+    font-weight: 600;
+}
+
+#resultadoCep {
+    margin-top: 20px;
+}
+
+.endereco {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #22c55e;
+}
+
+.endereco p {
+    margin-bottom: 8px;
+}
+
+@media(max-width:900px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cep-area {
+        flex-direction: column;
+    }
+}
+
+/* ==========================
+   SPINNER LOADING
+========================== */
+
+.loading-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    color: #f8fafc;
+    font-weight: 500;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255, 255, 255, .15);
+    border-top: 3px solid #60a5fa;
+    border-right: 3px solid #2563eb;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, .5);
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
